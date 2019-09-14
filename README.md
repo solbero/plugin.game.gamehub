@@ -41,4 +41,4 @@ git status
 ## About
 
 - [solbero](https://github.com/solbero)
-- [Source](https://github.com/RobLoach/lutris-kodi-addon)
+- [Source](https://github.com/solbero/plugin.game.gamehub)
