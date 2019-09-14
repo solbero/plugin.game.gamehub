@@ -1,3 +1,7 @@
+[B]Version 1.0.1: September 15th, 2019[/B]
+
+- Fix image paths
+
 [B]Version 1.0.0: September 14th, 2019[/B]
 
 - Initial commit
