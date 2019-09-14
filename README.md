@@ -22,7 +22,7 @@
 
 ## Install manually
 
-1. [Download the latest version of the GameHub Kodi Launcher](https://github.com/solbero/plugin.gamehub/releases/latest)
+1. [Download the latest version of the GameHub Kodi Launcher](https://github.com/solbero/plugin.game.gamehub/releases/latest)
 1. Go to Settings → Add-ons → Install from zip file
 1. Navigate to where you placed the zip file and select Install
 
@@ -33,8 +33,8 @@ If GameHub is installed as an AppImage or flatpack application, you must specify
 ## Development
 
 ```bash
-git clone git@github.com:solbero/plugin.gamehub.git ~/.kodi/addons/plugin.gamehub
-cd ~/.kodi/addons/plugin.gamehub
+git clone git@github.com:solbero/plugin.game.gamehub.git ~/.kodi/addons/plugin.game.gamehub
+cd ~/.kodi/addons/plugin.game.gamehub
 git status
 ```
 
