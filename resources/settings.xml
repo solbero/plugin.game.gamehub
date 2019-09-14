@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- General -->
+    <category label="30100">
+        <!-- Gamehub Executable -->
+        <setting id="use_custom_path"
+          type="bool"
+          label="30101"
+          default="false" />
+        <!-- Gamehub Executable -->
+        <setting id="gamehub_executable"
+            type="file"
+            label="30102"
+            value="/usr/bin/com.github.tkashkin.gamehub"
+            default="/usr/bin/com.github.tkashkin.gamehub"
+            enable="eq(-1,true)" />
+    </category>
+</settings>

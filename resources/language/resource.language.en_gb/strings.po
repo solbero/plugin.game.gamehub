@@ -1,0 +1,29 @@
+# Kodi Media Center language file
+# Addon Name: GameHub
+# Addon id: plugin.gamehub
+# Addon Provider: solbero
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: solbero\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30100"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30101"
+msgid "Enable Custom Path"
+msgstr "Enable Custom Path"
+
+msgctxt "#30102"
+msgid "Path to GameHub Executable"
+msgstr "Path to GameHub Executable"
