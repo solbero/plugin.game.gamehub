@@ -18,12 +18,12 @@
         <language>en</language>
         <platform>linux</platform>
         <assets>
-            <icon>resources/media/icon.png</icon>
-            <fanart>resources/media/fanart.png</fanart>
-            <screenshot>resources/media/screenshot_1.png</screenshot>
-            <screenshot>resources/media/screenshot_2.png</screenshot>
-            <screenshot>resources/media/screenshot_3.png</screenshot>
-            <screenshot>resources/media/screenshot_4.png</screenshot>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+            <screenshot>resources/screenshot_1.jpg</screenshot>
+            <screenshot>resources/screenshot_2.jpg</screenshot>
+            <screenshot>resources/screenshot_3.jpg</screenshot>
+            <screenshot>resources/screenshot_4.jpg</screenshot>
         </assets>
     </extension>
 </addon>
