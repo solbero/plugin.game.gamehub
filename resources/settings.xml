@@ -3,12 +3,12 @@
     <!-- General -->
     <category label="30100">
         <!-- Gamehub Executable -->
-        <setting id="use_custom_path"
+        <setting id="custom_path"
           type="bool"
           label="30101"
           default="false" />
         <!-- Gamehub Executable -->
-        <setting id="gamehub_executable"
+        <setting id="executable"
             type="file"
             label="30102"
             value="/usr/bin/com.github.tkashkin.gamehub"

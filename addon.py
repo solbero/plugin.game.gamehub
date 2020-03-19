@@ -5,9 +5,9 @@
 # License: GPL v.2 https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 from __future__ import unicode_literals
-import os
 import xbmc
 import xbmcaddon
+from subprocess import call
 from distutils.spawn import find_executable
 
 # Get the addon id
@@ -48,48 +48,49 @@ def inhibit_shutdown(bool):
     :param bool: true or false boolean
     :type bool: bool
     """
-    # Convert bool to lowercase string
+    # Convert bool argument to lowercase string
     str_bool = str(bool).lower
-    # Send bool to kodi
+    # Send bool value to Kodi
     xbmc.executebuiltin('InhibitIdleShutdown({0})'.format(str_bool))
 
 
-def executable_path():
+def get_path():
     """
     Find the path to the gamehub executable .
 
     :return: path to executable
     :rtype: list
     """
-    # Check if the user has specified a custom path
-    if addon.getSetting('use_custom_path') == 'true':
+    # Check if the user has specified a custom path in addon settings
+    if addon.getSetting('custom_path') == 'true':
         # Get the custom path from addon settings
-        path = addon.getSetting('gamehub_executable').decode('utf-8')
-    # Find the path to the gamehub executable
+        path = addon.getSetting('executable').decode('utf-8')
     else:
-        try:
-            path = find_executable('com.github.tkashkin.gamehub').decode('utf-8')
-        # Log if executable is not found
-        except Exception as e:
-            log('{0}').format(e)
+        # Find the path to the gamehub executable
+        path = find_executable('com.github.tkashkin.gamehub').decode('utf-8')
+    # Log lutris executable path to kodi.log
+    log('Executable path is {}'.format(path))
     return path
 
 
-def launch():
-    """Launch the GameHub executable."""
+def run():
+    """Launch the gamehub executable."""
+    # Add the path to the lutris executable to the command
+    cmd = get_path()
     # Stop playback if Kodi is playing any media
     if xbmc.Player().isPlaying():
         xbmc.Player().stop()
+    # Log command to kodi.log
+    log('Launch command is {0}'.format(cmd))
     # Disable the idle shutdown timer
     inhibit_shutdown(True)
-    # Launch gamehub executable
-    try:
-        os.system(executable_path().encode('utf-8'))
-    # Log if executable is not found
-    except Exception as e:
-        log('{0}').format(e)
-    # Enable the idle shutdown timer
+    # Convert command string to list
+    cmd = cmd.split()
+    # Launch gamehub with command. Subprocess.call waits for the game
+    # to finish before continuing
+    call(cmd)
+    # Enable the idle shutdown timer after the user exits the game
     inhibit_shutdown(False)
 
 if (__name__ == '__main__'):
-    launch()
+    run()

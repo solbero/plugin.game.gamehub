@@ -21,9 +21,9 @@ msgid "General"
 msgstr "General"
 
 msgctxt "#30101"
-msgid "Enable Custom Path"
-msgstr "Enable Custom Path"
+msgid "Enable custom path"
+msgstr "Enable custom path"
 
 msgctxt "#30102"
-msgid "Path to GameHub Executable"
-msgstr "Path to GameHub Executable"
+msgid "Path to GameHub executable"
+msgstr "Path to GameHub executable"
